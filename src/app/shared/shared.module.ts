@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
-
+import { PrimeNGModule } from '../prime-ng/prime-ng.module';
 
 
 @NgModule({
@@ -9,7 +9,11 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
     MenuBarComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNGModule
+  ],
+  exports: [
+    MenuBarComponent
   ]
 })
 export class SharedModule { }

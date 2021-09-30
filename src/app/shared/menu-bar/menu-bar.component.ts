@@ -1,16 +1,43 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-menu-bar',
   templateUrl: './menu-bar.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class MenuBarComponent implements OnInit {
+  items!: MenuItem[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+    this.items = [
+      {
+        label: 'Pipes de Angular',
+        icon: 'pi pi-desktop',
+        items:[
+          {
+            label: 'Textos y Fechas',
+            icon: 'pi pi-align-left',
+            routerLink: '/'
+          },
+          {
+            label: 'Números',
+            icon: 'pi pi-dollar',
+            routerLink: 'numeros'
+          },
+          {
+            label: 'No comúnes',
+            icon: 'pi pi-globe',
+            routerLink: 'no-comunes'
+          }
+        ]
+      },
+      {
+        label: 'Pipes personalizados',
+        icon: 'pi pi-cog'
+      }
+    ];
   }
-
 }
