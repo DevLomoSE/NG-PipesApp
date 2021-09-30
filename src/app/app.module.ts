@@ -9,9 +9,11 @@ import { SharedModule } from './shared/shared.module';
 import { VentasModule } from './ventas/ventas.module';
 
 import localeES from '@angular/common/locales/es-MX';
+import localeDE from '@angular/common/locales/de';
 import {registerLocaleData} from '@angular/common';
 
 registerLocaleData(localeES);
+registerLocaleData(localeDE);
 
 @NgModule({
   declarations: [
