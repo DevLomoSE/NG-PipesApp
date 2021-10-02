@@ -18,5 +18,10 @@
             {{ventasNetas + 2500000 | currency:'MXN':'symbol-narrow':'.0-2'}}
         </p-card>
     </div>
-    
+
+    <div class="col-4">
+        <p-card header="Ganancia porcentual" subheader="del presente año">
+            {{ (porcentaje + 0.0081354) | percent:'.0-2'}}
+        </p-card>
+    </div>
 </div>
